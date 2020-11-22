@@ -8,8 +8,8 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage'
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import UpcomingMovieListPage from './pages/upcomingPage';
-import MoviesContextProvider from "./contexts/moviesContext";
-import GenresContextProvider from "./contexts/genresContext";
+import MoviesContextProvider from "../contexts/moviesContext";
+import GenresContextProvider from "../contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
       <SiteHeader /> 
       <div className="container-fluid">
         <MoviesContextProvider>
-          <GenresContextProvider>    {/* NEW */}
+          <GenresContextProvider>    
           <Switch>    
           <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
@@ -29,7 +29,7 @@ const App = () => {
           <Route path="/movies/upcoming" component={UpcomingMovieListPage} />
           <Redirect from="*" to="/" />
           </Switch>
-            </GenresContextProvider>    {/* NEW */}
+            </GenresContextProvider>   
           </MoviesContextProvider>
         </div>
       </div>

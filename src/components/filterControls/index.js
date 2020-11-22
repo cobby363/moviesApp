@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./filterControls.css";
-import { GenresContext } from '../../contexts/genresContext' 
+import { GenresContextProvider } from './contexts/genresContext' 
 
 const FilterControls = props => {
-  const context = useContext(GenresContext);
+  const context = useContext(GenresContextProvider);
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
