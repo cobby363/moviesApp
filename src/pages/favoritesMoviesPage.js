@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import MovieListPageTemplate from "../components/templateMovieListPage";
 import AddReviewButton from '../components/buttons/addReview'
-import {MoviesContextProvider} from './contexts/moviesContext'
+import {MoviesContext} from '../contexts/movieContext'
 
 const FavoriteMoviesPage = props => {
-  const context = useContext(MoviesContextProvider);
+  const context = useContext(MoviesContext);
   const favorites = context.movies.filter( m => m.favorite )
   return (
     <MovieListPageTemplate

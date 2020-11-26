@@ -8,8 +8,8 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage'
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import UpcomingMovieListPage from './pages/upcomingPage';
-import MoviesContextProvider from "../contexts/moviesContext";
-import GenresContextProvider from "../contexts/genresContext";
+import MoviesContextProvider from "./contexts/movieContext";
+import GenresContextProvider from "./contexts/genreContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 
 const App = () => {

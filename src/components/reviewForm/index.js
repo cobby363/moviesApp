@@ -1,12 +1,12 @@
 import React, {useContext } from "react";
 import "./reviewForm.css";
 import useForm from "react-hook-form";
-import {MoviesContextProvider} from './contexts/moviesContext'
+import { MoviesContext } from "../../contexts/movieContext";
 import { withRouter } from "react-router-dom";
 
 const ReviewForm = ({ movie, history }) => {
   const { register, handleSubmit, errors, reset } = useForm();
-  const context = useContext(MoviesContextProvider);
+  const context = useContext(MoviesContext);
 
   const onSubmit = data => {
     context.addReview(movie, data)

@@ -30,11 +30,9 @@ export const getMovies = () => {
       .then(json => json.results);
   };
 
-  export const getUpcoming = () => {
+  export const getUpcomingMovies = () => {
     return fetch(
-      "https://api.themoviedb.org/3/genre/movie/upcoming?api_key=" +
-        process.env.REACT_APP_TMDB_KEY +
-        "&language=en-US"
+      "https://api.themoviedb.org/3/genre/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US"
     )
       .then(res => res.json())
       .then(json => json.genres);
