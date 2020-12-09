@@ -25,10 +25,10 @@ const App = () => {
           <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-          <Route exact path="/movie/now_playing" component={nowPlayingMovies} />
+          <Route exact path="/movies/now_playing" component={nowPlayingMovies} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
-          <Route path="/movie/upcoming" component={UpcomingMovieListPage} />
+          <Route path="/movies/upcoming" component={UpcomingMovieListPage} />
           <Redirect from="*" to="/" />
           </Switch>
             </GenresContextProvider>   
