@@ -30,6 +30,7 @@ const reducer = (state, action) => {
   }
 };
 
+
 const MoviesContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, { movies: [], upcoming: [] });
 

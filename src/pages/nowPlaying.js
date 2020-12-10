@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import PageTemplate from '../components/templateMovieListPage'
-import { getPlayingNow } from "../api/tmdb-api";
+import { MoviesContext } from "../contexts/movieContext";
+import AddToFavoritesButton from '../components/buttons/addToFavourites'
 
-const PlayingNowPage = () => {
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    getPlayingNow().then(movies => {
-      setMovies(movies);
-    });
-  }, []);
+const MovieListPage = () => {
+  const context = useContext(MoviesContext);
+  const movies = context.movies.filter((m) => {  // New
+    return !("favorite" in m);
+  });
 
   return (
-      <PageTemplate
-        title='Now Playing!'
-        movies={movies}
-      />
+    <PageTemplate
+      title="Movies Now Playing"
+      movies={movies}
+      action={(movie) => {
+        return <AddToFavoritesButton movie={movie} />;
+      }}
+    />
   );
 };
 
-export default PlayingNowPage;
+export default MovieListPage;
