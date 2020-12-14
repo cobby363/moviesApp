@@ -12,7 +12,9 @@ import UpcomingMoviePage from "./pages/upcomingPage";
 import MoviesContextProvider from "./contexts/movieContext";
 import GenresContextProvider from "./contexts/genreContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage'
-import nowPlayingPage from './pages/nowPlaying';
+import NowPlaying from './pages/nowPlaying'
+import PopularPage from './pages/popularPage'
+import TopRatedPage from './pages/topRated'
 
 
 const App = () => {
@@ -22,14 +24,17 @@ const App = () => {
         <SiteHeader /> 
         <div className="container-fluid">
           <MoviesContextProvider>
-            <GenresContextProvider>
+          <GenresContextProvider>
           <Switch>
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-            <Route path="/reviews/:id" component={MovieReviewPage} />
+            <Route path="/reviews/:id" component={MovieReviewPage}/>
             <Route path="/movies/upcoming" component={UpcomingMoviePage}/>
-            <Route path="/movies/nowPlaying" component={nowPlayingPage}/>
+            <Route path="/movies/nowPlaying" component={NowPlaying}/>
             <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
             <Route exact path="/movies/wishlist" component={WishListMoviesPage} />
+            <Route path = "/movies/popular" component = {PopularPage}/>
+            <Route path="/movies/nowPlaying" component={NowPlaying}/>
+            <Route path="/movies/topRated" component={TopRatedPage}/>
             <Route path="/movies/:id" component={MoviePage} />
             <Route path="/" component={HomePage} />
             <Redirect from="*" to="/" />
@@ -41,4 +46,4 @@ const App = () => {
     </BrowserRouter>
     );
   };
-  ReactDOM.render(<App />, document.getElementById("root"));
+  ReactDOM.render(<App/>, document.getElementById("root"));
