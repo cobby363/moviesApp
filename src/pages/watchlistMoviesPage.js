@@ -1,16 +1,17 @@
 import React, {useContext} from "react";
 import MovieListPageTemplate from "../components/templateMovieListPage";
-import AddReviewButton from '../components/buttons/addReview'
+import RemoveFromWatchlistButton from '../components/buttons/removeFromWatchlist'
 import {MoviesContext} from '../contexts/movieContext'
 
 const AddToWatchListPage = props => {
   const context = useContext(MoviesContext);
-  const watchlist = context.movies.filter( m => m.watchlist )
+  const watchlist = context.upcoming.filter( m => m.watchlist )
+  //const watchlist2 = context.nowPlaying.filter( n => n.watchlist )
   return (
     <MovieListPageTemplate
       movies={watchlist}
       title={"WatchList"}
-      action={movie => <AddReviewButton movie={movie} />}
+      action={movie => <RemoveFromWatchlistButton movie={movie} />}
     />
   );
 };

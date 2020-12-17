@@ -5,8 +5,8 @@ import AddToWatchListButton from '../components/buttons/addToWatchlist'
 
 const NowPlaying = () => {
   const context = useContext(MoviesContext);
-  const movies = context.nowPlaying.filter((m) => {  // New
-    return !("favorite" in m);
+  const movies = context.nowPlaying.filter((n) => {  // New
+    return !("watchlist" in n);
   });
 
   return (
