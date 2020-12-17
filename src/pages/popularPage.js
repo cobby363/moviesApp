@@ -6,7 +6,7 @@ import AddToWatchListButton from '../components/buttons/addToWatchlist'
 const PopularPage = () => {
   const context = useContext(MoviesContext);
   const movies = context.popular.filter((m) => {  // New
-    return !("favorite" in m);
+    return !("watchlist" in m);
   });
 
   return (

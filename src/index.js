@@ -15,6 +15,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage'
 import NowPlaying from './pages/nowPlaying'
 import PopularPage from './pages/popularPage'
 import TopRatedPage from './pages/topRated'
+import MovieCastPage from "./pages/movieCastPage"
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Switch>
             <Route exact path="/reviews/form" component={AddMovieReviewPage} />
             <Route path="/reviews/:id" component={MovieReviewPage}/>
+            <Route path="/movies/:id/full-cast" component={MovieCastPage} />
             <Route path="/movies/upcoming" component={UpcomingMoviePage}/>
             <Route path="/movies/nowPlaying" component={NowPlaying}/>
             <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
