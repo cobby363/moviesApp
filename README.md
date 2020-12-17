@@ -52,7 +52,7 @@ none other than standard
 
 ### UI Design.
 
-homepage.png
+![homepage](homepage.png)
 This is my homepage that I have used in my webapp. It shows a list of current films with the ability to add to favourites. If you click on the image you can view some of the details about the movie
 
 details.png
