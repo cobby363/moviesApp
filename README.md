@@ -67,7 +67,7 @@ if the user would like to view the movies that are coming out soon, they can vie
 ![Watchlist](Watchlist.png)
 As mentioned above, if the user wishes to add the movies to their watchlist, it will be displayed here so as that the user can come back to it at a later date. The movie can also be removed when they've seen it for example.
 
-![now playing](now playing.png)
+![now playing](nowPlaying.png)
 The movies that are currently playing will be displayed here and have the button option to add it to add to watchlist if they are missing it at the moment and wish to catch it in the future.
 
 ![popular](popular.png)
@@ -94,7 +94,7 @@ if the user would like to see what movies have the highest ever ratings, they ca
 ![Links](hyperlink.png)
 if the user would like to find out other movies that an actor as appeared in, they have access to these links on the right hand side which navigate to a new page to show the movies that they have appeared in. In order to access this page there is a dropdown on the details page.Clicking the 'Full Review' above it for a review extract will display the full text of the review
 
-![Homepage][homepage.png]
+![Homepage](homepage.png)
 Clicking a card causes the display of that movie's details.
 
 
